@@ -1,265 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nitesh Soni | Data Analyst Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Nitesh Soni | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <meta name="description" content="Data Analyst portfolio of Nitesh Soni showcasing projects, experience, and analytics skills.">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Styles -->
-  <style>
-    :root{
-      --bg:#EFECE3;
-      --primary:#8FABD4;
-      --accent:#4A70A9;
-      --text:#000;
-      --card:#ffffff;
-    }
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body{
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
-
-    header{
-      position:fixed;
-      top:0;
-      width:100%;
-      background:var(--primary);
-      padding:16px 40px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      z-index:100;
-    }
-
-    header nav a{
-      margin-left:20px;
-      text-decoration:none;
-      color:#000;
-      font-weight:500;
-    }
-
-    header nav a:hover{
-      color:var(--accent);
-    }
-
-    main{
-      padding-top:90px;
-    }
-
-    section{
-      max-width:1100px;
-      margin:auto;
-      padding:70px 40px;
-    }
-
-    h1{font-size:48px;}
-    h2{font-size:32px;margin-bottom:20px;}
-    h3{font-size:22px;margin-bottom:10px;}
-
-    .btn{
-      display:inline-block;
-      padding:12px 26px;
-      background:var(--accent);
-      color:#fff;
-      text-decoration:none;
-      border-radius:6px;
-      margin-top:20px;
-    }
-
-    .btn.secondary{
-      background:transparent;
-      color:var(--accent);
-      border:2px solid var(--accent);
-      margin-left:10px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-      margin-top:30px;
-    }
-
-    .card{
-      background:var(--card);
-      padding:20px;
-      border-radius:8px;
-      box-shadow:0 4px 10px rgba(0,0,0,.08);
-    }
-
-    /* HERO */
-    .hero p{
-      margin-top:12px;
-      font-size:18px;
-    }
-
-    /* EXPERIENCE */
-    .timeline .card{
-      border-left:4px solid var(--accent);
-    }
-
-    /* PROJECT FILTER */
-    .filters button{
-      margin-right:10px;
-      padding:8px 16px;
-      border:none;
-      background:var(--primary);
-      cursor:pointer;
-      border-radius:20px;
-    }
-
-    .filters button.active{
-      background:var(--accent);
-      color:#fff;
-    }
-
-    footer{
-      text-align:center;
-      padding:30px;
-      background:#000;
-      color:#fff;
-    }
-  </style>
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-[#EFECE3] text-black">
+
+<!-- TOP BAR -->
+<div class="flex justify-between items-center px-6 py-2 text-sm border-b">
+  <a href="mailto:niteshsoniknp900@gmail.com" class="flex items-center gap-2 hover:underline">
+    <i class="ri-mail-line"></i>
+    niteshsoniknp900@gmail.com
+  </a>
+
+  <div class="flex gap-4 text-lg">
+    <a href="https://github.com/" target="_blank" class="hover:text-[#4A70A9]">
+      <i class="ri-github-fill"></i>
+    </a>
+    <a href="https://linkedin.com/" target="_blank" class="hover:text-[#4A70A9]">
+      <i class="ri-linkedin-box-fill"></i>
+    </a>
+  </div>
+</div>
 
 <!-- NAVBAR -->
-<header>
-  <strong>niteshsoni@email.com</strong>
-  <nav>
+<header class="flex justify-between items-center px-8 py-4">
+  <h1 class="text-2xl font-bold">Portfolio.</h1>
+
+  <nav class="flex gap-6 font-medium">
     <a href="#home">Home</a>
-    <a href="#about">About</a>
+    <a href="#about" onclick="openAboutModal()">About Me</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<main>
+<!-- HERO SECTION -->
+<section id="home" class="min-h-[80vh] flex flex-col justify-center items-center text-center px-4">
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <h1>Hi! I'm Nitesh Soni</h1>
-  <p>Business Analyst • Data Analyst • Business Intelligence Enthusiast • Storytelling with Data</p>
-  <p>Turning raw data into meaningful insights.</p>
+  <p class="text-lg text-[#8FABD4] mb-2">Hi!</p>
 
-  <a href="#projects" class="btn">Here’s More!</a>
-  <a href="resume.pdf" class="btn secondary" download>Download Resume</a>
-</section>
+  <h2 class="text-5xl md:text-6xl font-extrabold mb-4">
+    I'm Nitesh Soni !
+  </h2>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    Alongside my academic journey in commerce and business studies, I developed a strong interest in
-    data analytics and business intelligence. I work with SQL, Excel, Power BI, and Tableau to
-    analyze datasets, identify patterns, and present insights that support data-driven decisions.
+  <p class="text-[#8FABD4] font-medium mb-2">
+    IIT Roorkee certified Business Analyst
   </p>
+
+  <p class="text-[#8FABD4] text-sm md:text-base mb-4">
+    Business Analyst • Data Analyst • Business Intelligence Enthusiast • Storytelling With Data
+  </p>
+
+  <p class="mb-8">
+    Turning raw data into meaningful insights.
+  </p>
+
+  <button onclick="openAboutModal()"
+          class="px-8 py-3 rounded-full bg-[#4A70A9] text-white font-semibold hover:opacity-90">
+    Here's More!
+  </button>
+
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <h2>Experience</h2>
+<!-- ABOUT ME MODAL -->
+<div id="aboutModal"
+     class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
 
-  <div class="timeline grid">
+  <div class="bg-white max-w-3xl w-[90%] max-h-[85vh] rounded-xl shadow-lg relative overflow-y-auto p-8">
 
-    <div class="card">
-      <h3>Vaco Binary Semantics LLP</h3>
-      <p><strong>Sales Executive</strong> | Nov 2024 – Jan 2025</p>
-      <ul>
-        <li>Worked with sales data to track performance metrics</li>
-        <li>Supported reporting and data entry operations</li>
-        <li>Collaborated with cross-functional teams</li>
-      </ul>
+    <button onclick="closeAboutModal()"
+            class="absolute top-4 right-4 text-2xl font-bold text-gray-500 hover:text-black">
+      ×
+    </button>
+
+    <h3 class="text-3xl font-bold mb-6">About Me</h3>
+
+    <div class="space-y-5 text-gray-800 leading-relaxed">
+
+      <p>
+        I'm a <strong>B.Com (Hons)</strong> student at
+        <span class="text-[#4A70A9] font-medium">
+          Jagran College of Arts, Science & Commerce
+        </span>
+        with a deep interest in understanding how data shapes business strategy
+        and financial performance. Over time, my curiosity for numbers has evolved
+        into a strong passion for Business Analytics, where insights meet impact.
+      </p>
+
+      <p>
+        Alongside my graduation, I developed a deeper interest in how data supports
+        business decisions. This led me to complete the
+        <span class="text-[#4A70A9] font-medium">
+          Data Analytics program at ICT Academy, IIT Kanpur
+        </span>,
+        where I worked on data handling, analytical reasoning, and transforming raw
+        information into meaningful insights.
+      </p>
+
+      <p>
+        After completing my semester examinations, I further strengthened my
+        technical foundation by completing the CCC certification, enhancing my
+        understanding of computer fundamentals and practical digital tools.
+      </p>
+
+      <p>
+        My professional exposure across accounting, financial services, and customer
+        relationship management has shaped my analytical thinking, communication
+        skills, and ability to work effectively in fast-paced environments.
+      </p>
+
+      <p>
+        I enjoy working with data, simplifying complexity, and contributing to
+        decisions that create real business impact. My goal is to build a career
+        where analytics, finance, and strategy intersect to drive smarter,
+        insight-driven decisions.
+      </p>
+
     </div>
-
-    <div class="card">
-      <h3>Bajaj Finserv</h3>
-      <p><strong>Summer Intern</strong> | Jun 2024 – Aug 2024</p>
-      <ul>
-        <li>Gained exposure to insurance and banking products</li>
-        <li>Analyzed customer and policy-related data</li>
-        <li>Developed understanding of financial operations</li>
-      </ul>
-    </div>
-
   </div>
-</section>
+</div>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Portfolio Projects</h2>
+<!-- PLACEHOLDER SECTIONS -->
+<section id="experience" class="h-40"></section>
+<section id="projects" class="h-40"></section>
+<section id="contact" class="h-40"></section>
 
-  <div class="filters">
-    <button class="active" onclick="filterProjects('all')">All</button>
-    <button onclick="filterProjects('sql')">SQL</button>
-    <button onclick="filterProjects('powerbi')">Power BI</button>
-    <button onclick="filterProjects('excel')">Excel</button>
-  </div>
-
-  <div class="grid">
-
-    <div class="card project sql">
-      <h3>Banking Application – SQL Case Study</h3>
-      <p>Analyzed transactions, customers, and accounts using SQL.</p>
-    </div>
-
-    <div class="card project excel">
-      <h3>Retail Sales Analysis – Excel</h3>
-      <p>Built dashboards and KPIs to understand sales trends.</p>
-    </div>
-
-    <div class="card project powerbi">
-      <h3>YouTube Analytics Dashboard – Power BI</h3>
-      <p>Visualized engagement metrics and audience behavior.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: niteshsoni@email.com</p>
-  <p>LinkedIn: linkedin.com/in/nitesh-soni</p>
-  <p>GitHub: github.com/niteshsoni</p>
-  <p>Location: India</p>
-</section>
-
-</main>
-
-<footer>
-  © 2025 Nitesh Soni
-</footer>
-
-<!-- JS -->
+<!-- JAVASCRIPT -->
 <script>
-  function filterProjects(type){
-    const projects = document.querySelectorAll('.project');
-    const buttons = document.querySelectorAll('.filters button');
+  function openAboutModal() {
+    document.getElementById("aboutModal").classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  }
 
-    buttons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-
-    projects.forEach(project=>{
-      project.style.display =
-        type === 'all' || project.classList.contains(type)
-        ? 'block'
-        : 'none';
-    });
+  function closeAboutModal() {
+    document.getElementById("aboutModal").classList.add("hidden");
+    document.body.style.overflow = "auto";
   }
 </script>
 
